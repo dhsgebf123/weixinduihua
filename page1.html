@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>微信聊天记录</title>
+<style>
+body { font-family: "Helvetica", "Arial", sans-serif; background:#e5e5e5; }
+.chat-container { width:375px; margin:20px auto; background:#fff; padding:10px; border-radius:5px; }
+.time { text-align:center; color:#999; font-size:12px; margin:10px 0; }
+.message { display:flex; margin-bottom:10px; }
+.message .bubble { max-width:70%; padding:8px 12px; border-radius:5px; }
+.message.left { justify-content:flex-start; }
+.message.right { justify-content:flex-end; }
+.message.left .bubble { background:#fff; border:1px solid #dcdcdc; }
+.message.right .bubble { background:#95ec69; color:#fff; }
+.name { font-size:12px; color:#666; margin-bottom:2px; }
+</style>
+</head>
+<body>
+<div class="chat-container">
+<div class="time">2024 年 11 月 14 日 10:00</div>
+<div class="message left">
+  <div>
+    <div class="name">导师</div>
+    <div class="bubble">倚涛，第一次正式沟通，先聊聊你目前的兴趣和技术专长吧。</div>
+  </div>
+</div>
+<div class="message right">
+  <div>
+    <div class="name">学生</div>
+    <div class="bubble">老师好！我对单片机项目最有感觉，尤其想做跟安全相关的系统。</div>
+  </div>
+</div>
+<div class="message left">
+  <div>
+    <div class="name">导师</div>
+    <div class="bubble">很好，门禁属于“主动防护”，和你说的安全场景契合。</div>
+  </div>
+</div>
+<div class="message right">
+  <div>
+    <div class="name">学生</div>
+    <div class="bubble">我也想看看能不能把 RFID 或人脸识别结合进去。</div>
+  </div>
+</div>
+<div class="message left">
+  <div>
+    <div class="name">导师</div>
+    <div class="bubble">可以先广撒网，把 3 — 4 个方向写成题目草案，别怕想多。</div>
+  </div>
+</div>
+<div class="message right">
+  <div>
+    <div class="name">学生</div>
+    <div class="bubble">题目格式我有点拿不准。</div>
+  </div>
+</div>
+<div class="message left">
+  <div>
+    <div class="name">导师</div>
+    <div class="bubble">用“基于 ××× 的 ××× 系统设计”，三段式最清晰。</div>
+  </div>
+</div>
+<div class="message right">
+  <div>
+    <div class="name">学生</div>
+    <div class="bubble">明白，那我这周末整理思维导图，再对照近三年论文热度。</div>
+  </div>
+</div>
+<div class="message left">
+  <div>
+    <div class="name">导师</div>
+    <div class="bubble">别忘了查学院流程，题目自拟登记 12 月 6 日前要完成。</div>
+  </div>
+</div>
+<div class="message right">
+  <div>
+    <div class="name">学生</div>
+    <div class="bubble">好的老师，稍后我把计划表发您确认。</div>
+  </div>
+</div>
+<div class="message left">
+  <div>
+    <div class="name">导师</div>
+    <div class="bubble">遇到问题随时微信或企业微信私信我。</div>
+  </div>
+</div>
+</div>
+</body>
+</html>
