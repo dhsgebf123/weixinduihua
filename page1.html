@@ -4,87 +4,96 @@
 <meta charset="UTF-8">
 <title>微信聊天记录</title>
 <style>
-body { font-family: "Helvetica", "Arial", sans-serif; background:#e5e5e5; }
-.chat-container { width:375px; margin:20px auto; background:#fff; padding:10px; border-radius:5px; }
-.time { text-align:center; color:#999; font-size:12px; margin:10px 0; }
-.message { display:flex; margin-bottom:10px; }
-.message .bubble { max-width:70%; padding:8px 12px; border-radius:5px; }
-.message.left { justify-content:flex-start; }
-.message.right { justify-content:flex-end; }
-.message.left .bubble { background:#fff; border:1px solid #dcdcdc; }
-.message.right .bubble { background:#95ec69; color:#fff; }
-.name { font-size:12px; color:#666; margin-bottom:2px; }
+body{
+  background:#d3d3d3;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin:0;
+}
+.wechat-wrapper{
+  width:375px;
+  margin:20px auto;
+  background:#f5f5f5;
+  border:1px solid #ccc;
+  border-radius:10px;
+  overflow:hidden;
+}
+.header{
+  background:#ededed;
+  padding:10px;
+  text-align:center;
+  font-weight:bold;
+  position:relative;
+}
+.chat-area{padding:10px; background:#e5e5e5;}
+.timestamp{font-size:12px;color:#888;text-align:center;margin:10px 0;}
+.message{display:flex;margin-bottom:10px;align-items:flex-end;}
+.message .avatar{width:36px;height:36px;border-radius:50%;background:#bbb;}
+.message .bubble{position:relative;max-width:70%;padding:8px 12px;border-radius:5px;font-size:14px;line-height:1.4;}
+.message.left .avatar{margin-right:8px;}
+.message.right{justify-content:flex-end;}
+.message.right .avatar{margin-left:8px;order:2;}
+.message.right .bubble{order:1;background:#9eea6a;}
+.message.left .bubble{background:#fff;border:1px solid #dcdcdc;}
+.message.left .bubble:after{content:"";position:absolute;left:-8px;top:8px;border-top:6px solid transparent;border-right:8px solid #fff;border-bottom:6px solid transparent;}
+.message.left .bubble:before{content:"";position:absolute;left:-9px;top:8px;border-top:6px solid transparent;border-right:8px solid #dcdcdc;border-bottom:6px solid transparent;}
+.message.right .bubble:after{content:"";position:absolute;right:-8px;top:8px;border-top:6px solid transparent;border-left:8px solid #9eea6a;border-bottom:6px solid transparent;}
+.input-bar{background:#f0f0f0;padding:8px;display:flex;align-items:center;}
+.input-bar .field{flex:1;background:#fff;border:1px solid #ccc;border-radius:5px;height:32px;}
 </style>
 </head>
 <body>
-<div class="chat-container">
-<div class="time">2024 年 11 月 14 日 10:00</div>
-<div class="message left">
-  <div>
-    <div class="name">导师</div>
-    <div class="bubble">倚涛，第一次正式沟通，先聊聊你目前的兴趣和技术专长吧。</div>
+<div class="wechat-wrapper">
+  <div class="header">导师</div>
+  <div class="chat-area">
+    <div class="timestamp">2024 年 11 月 14 日 10:00</div>
+    <div class="message left">
+      <div class="avatar"></div>
+      <div class="bubble">倚涛，第一次正式沟通，先聊聊你目前的兴趣和技术专长吧。</div>
+    </div>
+    <div class="message right">
+      <div class="bubble">老师好！我对单片机项目最有感觉，尤其想做跟安全相关的系统。</div>
+      <div class="avatar"></div>
+    </div>
+    <div class="message left">
+      <div class="avatar"></div>
+      <div class="bubble">很好，门禁属于“主动防护”，和你说的安全场景契合。</div>
+    </div>
+    <div class="message right">
+      <div class="bubble">我也想看看能不能把 RFID 或人脸识别结合进去。</div>
+      <div class="avatar"></div>
+    </div>
+    <div class="message left">
+      <div class="avatar"></div>
+      <div class="bubble">可以先广撒网，把 3 — 4 个方向写成题目草案，别怕想多。</div>
+    </div>
+    <div class="message right">
+      <div class="bubble">题目格式我有点拿不准。</div>
+      <div class="avatar"></div>
+    </div>
+    <div class="message left">
+      <div class="avatar"></div>
+      <div class="bubble">用“基于 ××× 的 ××× 系统设计”，三段式最清晰。</div>
+    </div>
+    <div class="message right">
+      <div class="bubble">明白，那我这周末整理思维导图，再对照近三年论文热度。</div>
+      <div class="avatar"></div>
+    </div>
+    <div class="message left">
+      <div class="avatar"></div>
+      <div class="bubble">别忘了查学院流程，题目自拟登记 12 月 6 日前要完成。</div>
+    </div>
+    <div class="message right">
+      <div class="bubble">好的老师，稍后我把计划表发您确认。</div>
+      <div class="avatar"></div>
+    </div>
+    <div class="message left">
+      <div class="avatar"></div>
+      <div class="bubble">遇到问题随时微信或企业微信私信我。</div>
+    </div>
   </div>
-</div>
-<div class="message right">
-  <div>
-    <div class="name">学生</div>
-    <div class="bubble">老师好！我对单片机项目最有感觉，尤其想做跟安全相关的系统。</div>
+  <div class="input-bar">
+    <div class="field"></div>
   </div>
-</div>
-<div class="message left">
-  <div>
-    <div class="name">导师</div>
-    <div class="bubble">很好，门禁属于“主动防护”，和你说的安全场景契合。</div>
-  </div>
-</div>
-<div class="message right">
-  <div>
-    <div class="name">学生</div>
-    <div class="bubble">我也想看看能不能把 RFID 或人脸识别结合进去。</div>
-  </div>
-</div>
-<div class="message left">
-  <div>
-    <div class="name">导师</div>
-    <div class="bubble">可以先广撒网，把 3 — 4 个方向写成题目草案，别怕想多。</div>
-  </div>
-</div>
-<div class="message right">
-  <div>
-    <div class="name">学生</div>
-    <div class="bubble">题目格式我有点拿不准。</div>
-  </div>
-</div>
-<div class="message left">
-  <div>
-    <div class="name">导师</div>
-    <div class="bubble">用“基于 ××× 的 ××× 系统设计”，三段式最清晰。</div>
-  </div>
-</div>
-<div class="message right">
-  <div>
-    <div class="name">学生</div>
-    <div class="bubble">明白，那我这周末整理思维导图，再对照近三年论文热度。</div>
-  </div>
-</div>
-<div class="message left">
-  <div>
-    <div class="name">导师</div>
-    <div class="bubble">别忘了查学院流程，题目自拟登记 12 月 6 日前要完成。</div>
-  </div>
-</div>
-<div class="message right">
-  <div>
-    <div class="name">学生</div>
-    <div class="bubble">好的老师，稍后我把计划表发您确认。</div>
-  </div>
-</div>
-<div class="message left">
-  <div>
-    <div class="name">导师</div>
-    <div class="bubble">遇到问题随时微信或企业微信私信我。</div>
-  </div>
-</div>
 </div>
 </body>
 </html>
